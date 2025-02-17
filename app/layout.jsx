@@ -15,7 +15,15 @@ const JetBrainsMono = JetBrains_Mono({
 export const metadata = {
   title: "ie.together",
   description: "ie.together is a community of developers, designers, and creators who are passionate about building and creating things together.",
-  favIcon: "/ie.ico", // Add the favicon property
+  icons: {
+        icon: [
+            {
+                url: "/ie.ico", // /public path
+                href: "/ie.ico/", // /public path
+            },
+        ],
+    favIcon: "/favicon.ico", // /public path
+      },
 };
 
 export default function RootLayout({ children }) {
@@ -23,8 +31,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <Head>
         <title>{metadata.title}</title>
-        <meta name="description" content={metadata.description} />
-        <link rel="icon" href={metadata.favIcon} />
+        
       </Head>
       <body className={JetBrainsMono.variable}>
         <Header />
