@@ -1,0 +1,41 @@
+.swiper-button-next,
+.swiper-button-prev {
+  color: rgba(255, 255, 255, 0.8);/* Change this to your desired color */
+  width: 30px; /* Adjust the width as needed */
+  height: 30px; /* Adjust the height as needed */
+  padding: 5px; /* Adjust the padding as needed */
+  background-color: #00ff99;  /* Add background color for visibility */
+  border-radius: 50%; /* Make the buttons round */
+  z-index: 10; /* Ensure buttons are above other elements */
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  color: #000000; /* Change this to your desired hover color */
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 20px; /* Adjust the font size as needed */
+}
+
+/* Position the buttons below the slider on xl screens */
+@media (min-width: 1280px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    position: absolute;
+    bottom: 0px; /* Adjust the bottom position as needed */
+    top: auto;
+    z-index: 20;
+  }
+
+  .swiper-button-next {
+    right: 45%; /* Adjust the right position as needed */
+    transform: translateX(50%);
+  }
+
+  .swiper-button-prev {
+    left: 45%; /* Adjust the left position as needed */
+    transform: translateX(-50%);
+  }
+}
